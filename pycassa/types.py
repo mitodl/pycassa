@@ -57,7 +57,11 @@ class CassandraType(object):
             self.unpack = marshal.unpacker_for(self.__class__.__name__)
 
     def __str__(self):
-        return self.__class__.__name__ + "(reversed=" + str(self.reversed).lower() + ")"
+        if self.reversed:
+            str_template = 'org.apache.cassandra.db.marshal.ReversedType({0})'
+        else:
+            str_template = '{0}'
+        return str_template.format(self.__class__.__name__)
 
 class BytesType(CassandraType):
     """ Stores data as a byte array """
