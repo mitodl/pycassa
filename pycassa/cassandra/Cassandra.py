@@ -2831,7 +2831,7 @@ class login_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('login_args')
     if self.auth_request is not None:
@@ -2903,7 +2903,7 @@ class login_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('login_result')
     if self.authnx is not None:
@@ -2967,7 +2967,7 @@ class set_keyspace_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('set_keyspace_args')
     if self.keyspace is not None:
@@ -3030,7 +3030,7 @@ class set_keyspace_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('set_keyspace_result')
     if self.ire is not None:
@@ -3107,7 +3107,7 @@ class get_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_args')
     if self.key is not None:
@@ -3217,7 +3217,7 @@ class get_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_result')
     if self.success is not None:
@@ -3319,7 +3319,7 @@ class get_slice_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_slice_args')
     if self.key is not None:
@@ -3431,7 +3431,7 @@ class get_slice_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_slice_result')
     if self.success is not None:
@@ -3532,7 +3532,7 @@ class get_count_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_count_args')
     if self.key is not None:
@@ -3638,7 +3638,7 @@ class get_count_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_count_result')
     if self.success is not None:
@@ -3741,7 +3741,7 @@ class multiget_slice_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('multiget_slice_args')
     if self.keys is not None:
@@ -3862,7 +3862,7 @@ class multiget_slice_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('multiget_slice_result')
     if self.success is not None:
@@ -3972,7 +3972,7 @@ class multiget_count_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('multiget_count_args')
     if self.keys is not None:
@@ -4087,7 +4087,7 @@ class multiget_count_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('multiget_count_result')
     if self.success is not None:
@@ -4190,7 +4190,7 @@ class get_range_slices_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_range_slices_args')
     if self.column_parent is not None:
@@ -4302,7 +4302,7 @@ class get_range_slices_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_range_slices_result')
     if self.success is not None:
@@ -4402,7 +4402,7 @@ class get_paged_slice_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_paged_slice_args')
     if self.column_family is not None:
@@ -4514,7 +4514,7 @@ class get_paged_slice_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_paged_slice_result')
     if self.success is not None:
@@ -4616,7 +4616,7 @@ class get_indexed_slices_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_indexed_slices_args')
     if self.column_parent is not None:
@@ -4728,7 +4728,7 @@ class get_indexed_slices_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('get_indexed_slices_result')
     if self.success is not None:
@@ -4829,7 +4829,7 @@ class insert_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('insert_args')
     if self.key is not None:
@@ -4928,7 +4928,7 @@ class insert_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('insert_result')
     if self.ire is not None:
@@ -5022,7 +5022,7 @@ class add_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('add_args')
     if self.key is not None:
@@ -5121,7 +5121,7 @@ class add_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('add_result')
     if self.ire is not None:
@@ -5214,7 +5214,7 @@ class remove_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('remove_args')
     if self.key is not None:
@@ -5311,7 +5311,7 @@ class remove_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('remove_result')
     if self.ire is not None:
@@ -5396,7 +5396,7 @@ class remove_counter_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('remove_counter_args')
     if self.key is not None:
@@ -5489,7 +5489,7 @@ class remove_counter_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('remove_counter_result')
     if self.ire is not None:
@@ -5583,7 +5583,7 @@ class batch_mutate_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('batch_mutate_args')
     if self.mutation_map is not None:
@@ -5681,7 +5681,7 @@ class batch_mutate_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('batch_mutate_result')
     if self.ire is not None:
@@ -5775,7 +5775,7 @@ class atomic_batch_mutate_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('atomic_batch_mutate_args')
     if self.mutation_map is not None:
@@ -5873,7 +5873,7 @@ class atomic_batch_mutate_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('atomic_batch_mutate_result')
     if self.ire is not None:
@@ -5941,7 +5941,7 @@ class truncate_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('truncate_args')
     if self.cfname is not None:
@@ -6022,7 +6022,7 @@ class truncate_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('truncate_result')
     if self.ire is not None:
@@ -6076,7 +6076,7 @@ class describe_schema_versions_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_schema_versions_args')
     oprot.writeFieldStop()
@@ -6151,7 +6151,7 @@ class describe_schema_versions_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_schema_versions_result')
     if self.success is not None:
@@ -6208,7 +6208,7 @@ class describe_keyspaces_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_keyspaces_args')
     oprot.writeFieldStop()
@@ -6278,7 +6278,7 @@ class describe_keyspaces_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_keyspaces_result')
     if self.success is not None:
@@ -6331,7 +6331,7 @@ class describe_cluster_name_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_cluster_name_args')
     oprot.writeFieldStop()
@@ -6386,7 +6386,7 @@ class describe_cluster_name_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_cluster_name_result')
     if self.success is not None:
@@ -6432,7 +6432,7 @@ class describe_version_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_version_args')
     oprot.writeFieldStop()
@@ -6487,7 +6487,7 @@ class describe_version_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_version_result')
     if self.success is not None:
@@ -6547,7 +6547,7 @@ class describe_ring_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_ring_args')
     if self.keyspace is not None:
@@ -6623,7 +6623,7 @@ class describe_ring_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_ring_result')
     if self.success is not None:
@@ -6676,7 +6676,7 @@ class describe_token_map_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_token_map_args')
     oprot.writeFieldStop()
@@ -6746,7 +6746,7 @@ class describe_token_map_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_token_map_result')
     if self.success is not None:
@@ -6800,7 +6800,7 @@ class describe_partitioner_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_partitioner_args')
     oprot.writeFieldStop()
@@ -6855,7 +6855,7 @@ class describe_partitioner_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_partitioner_result')
     if self.success is not None:
@@ -6901,7 +6901,7 @@ class describe_snitch_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_snitch_args')
     oprot.writeFieldStop()
@@ -6956,7 +6956,7 @@ class describe_snitch_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_snitch_result')
     if self.success is not None:
@@ -7016,7 +7016,7 @@ class describe_keyspace_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_keyspace_args')
     if self.keyspace is not None:
@@ -7096,7 +7096,7 @@ class describe_keyspace_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_keyspace_result')
     if self.success is not None:
@@ -7188,7 +7188,7 @@ class describe_splits_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_splits_args')
     if self.cfName is not None:
@@ -7281,7 +7281,7 @@ class describe_splits_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_splits_result')
     if self.success is not None:
@@ -7334,7 +7334,7 @@ class trace_next_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('trace_next_query_args')
     oprot.writeFieldStop()
@@ -7389,7 +7389,7 @@ class trace_next_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('trace_next_query_result')
     if self.success is not None:
@@ -7473,7 +7473,7 @@ class describe_splits_ex_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_splits_ex_args')
     if self.cfName is not None:
@@ -7567,7 +7567,7 @@ class describe_splits_ex_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('describe_splits_ex_result')
     if self.success is not None:
@@ -7635,7 +7635,7 @@ class system_add_column_family_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_add_column_family_args')
     if self.cf_def is not None:
@@ -7714,7 +7714,7 @@ class system_add_column_family_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_add_column_family_result')
     if self.success is not None:
@@ -7782,7 +7782,7 @@ class system_drop_column_family_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_drop_column_family_args')
     if self.column_family is not None:
@@ -7861,7 +7861,7 @@ class system_drop_column_family_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_drop_column_family_result')
     if self.success is not None:
@@ -7930,7 +7930,7 @@ class system_add_keyspace_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_add_keyspace_args')
     if self.ks_def is not None:
@@ -8009,7 +8009,7 @@ class system_add_keyspace_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_add_keyspace_result')
     if self.success is not None:
@@ -8077,7 +8077,7 @@ class system_drop_keyspace_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_drop_keyspace_args')
     if self.keyspace is not None:
@@ -8156,7 +8156,7 @@ class system_drop_keyspace_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_drop_keyspace_result')
     if self.success is not None:
@@ -8225,7 +8225,7 @@ class system_update_keyspace_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_update_keyspace_args')
     if self.ks_def is not None:
@@ -8304,7 +8304,7 @@ class system_update_keyspace_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_update_keyspace_result')
     if self.success is not None:
@@ -8373,7 +8373,7 @@ class system_update_column_family_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_update_column_family_args')
     if self.cf_def is not None:
@@ -8452,7 +8452,7 @@ class system_update_column_family_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('system_update_column_family_result')
     if self.success is not None:
@@ -8528,7 +8528,7 @@ class execute_cql_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_cql_query_args')
     if self.query is not None:
@@ -8632,7 +8632,7 @@ class execute_cql_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_cql_query_result')
     if self.success is not None:
@@ -8724,7 +8724,7 @@ class execute_cql3_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_cql3_query_args')
     if self.query is not None:
@@ -8834,7 +8834,7 @@ class execute_cql3_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_cql3_query_result')
     if self.success is not None:
@@ -8918,7 +8918,7 @@ class prepare_cql_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('prepare_cql_query_args')
     if self.query is not None:
@@ -8995,7 +8995,7 @@ class prepare_cql_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('prepare_cql_query_result')
     if self.success is not None:
@@ -9067,7 +9067,7 @@ class prepare_cql3_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('prepare_cql3_query_args')
     if self.query is not None:
@@ -9144,7 +9144,7 @@ class prepare_cql3_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('prepare_cql3_query_result')
     if self.success is not None:
@@ -9221,7 +9221,7 @@ class execute_prepared_cql_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_prepared_cql_query_args')
     if self.itemId is not None:
@@ -9328,7 +9328,7 @@ class execute_prepared_cql_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_prepared_cql_query_result')
     if self.success is not None:
@@ -9425,7 +9425,7 @@ class execute_prepared_cql3_query_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_prepared_cql3_query_args')
     if self.itemId is not None:
@@ -9538,7 +9538,7 @@ class execute_prepared_cql3_query_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('execute_prepared_cql3_query_result')
     if self.success is not None:
@@ -9614,7 +9614,7 @@ class set_cql_version_args(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('set_cql_version_args')
     if self.version is not None:
@@ -9677,7 +9677,7 @@ class set_cql_version_result(object):
 
   def write(self, oprot):
     if oprot.__class__ == TBinaryProtocol.TBinaryProtocolAccelerated and self.thrift_spec is not None and fastbinary is not None:
-      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec)))
+      oprot.trans.write(fastbinary.encode_binary(self, (self.__class__, self.thrift_spec, False)))
       return
     oprot.writeStructBegin('set_cql_version_result')
     if self.ire is not None:
